@@ -1,5 +1,10 @@
 h1 {text-align: center;}
-h2 {text-align: center;}
+
+#currentWord {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold
+}
 
 #game-board {
     display: flex;

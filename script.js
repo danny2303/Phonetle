@@ -1,5 +1,5 @@
 var wordLength = 5;
-var numTries = 5;
+var numTries = 3;
 
 var answer = getWordOfLength(wordLength)
 
@@ -42,12 +42,17 @@ function getBox(row,i) {
 }
 
 function buttonClicked(n,str) {
-    if (placing) {
+    if (placing && currentRow<numTries) {
         if (currentBox<wordLength) {
             var box = getBox(currentRow,currentBox)
             box.id=n
             box.innerHTML = str
             currentBox+=1
+            let currentWord = document.getElementById("currentWord");
+            var phonemes = []
+            for (let i=0; i<currentBox; i++) {phonemes[i] = getBox(currentRow,i).id}
+            var result = findPronunciation(phonemes)
+            if (result==null) {currentWord.innerHTML = "n/a"} else {currentWord.innerHTML = result}
         }
     }
     sounds[n].play();
