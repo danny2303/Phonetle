@@ -1,0 +1,97 @@
+h1 {
+    text-align: center;
+}
+
+#game-board {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .letter-box {
+    border: 2px solid gray;
+    border-radius: 3px;
+    margin: 2px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .filled-box {
+    border: 2px solid black;
+  }
+  
+  .letter-row {
+    display: flex;
+  }
+
+#container div {
+  align-items: center;
+}
+
+#keyboard div{
+    margin: auto;
+    width: fit-content;
+    padding: 0.1%;
+
+ }
+
+ .row {
+  width: fit-content;
+ }
+
+.keyboard-button {
+  width: 35px;
+  height: 35px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.1rem;
+  margin: 0 1px;
+  cursor: pointer;
+  text-align: center;
+  font-family: monospace;
+}
+
+.empty-button {
+  width: 35px;
+  height: 35px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 0.1rem;
+  margin: 0 1px;
+  cursor: pointer;
+  text-align: center;
+  font-family: monospace;
+  color: transparent;
+}
+
+.center {
+  margin: auto;
+  width: fit-content;
+  padding: 10px
+}
+
+#placeToggle {
+  margin: auto;
+  width: 300px;
+  padding: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background-color: rgb(115, 149, 115);
+}
+
+.littleButton {
+  width: 140px;
+  height: 35px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 0.1rem;
+  margin: 0 1px;
+  cursor: pointer;
+  text-align: center;
+  font-family: monospace;
+}
