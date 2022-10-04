@@ -105,7 +105,7 @@ function undo() {
 var sounds = []
 for (let i=1; i<45; i++) {sounds[i] = new Audio("Sounds/"+i.toString()+".wav");}
 
-
+/*
 var currentIndex = 0; // keep track of the current index
 
 sounds.forEach(function(sound) {
@@ -116,4 +116,4 @@ function onended(evt) {
     sounds[currentIndex].play(); // play the next sound
 }
 
-btn.onclick = sounds[0].play.bind(sounds[0]);
+btn.onclick = sounds[0].play.bind(sounds[0]);*/
