@@ -109,6 +109,11 @@ function undo() {
         var box = getBox(currentRow,currentBox);
         box.innerHTML=""
         box.id=0
+        
+        var phonemes = []
+        for (let i=0; i<currentBox; i++) {phonemes[i] = getBox(currentRow,i).id}
+        var result = findPronunciation(phonemes)
+        if (result==null) {currentWord.innerHTML = "n/a"} else {currentWord.innerHTML = result}
     }
 }
 
