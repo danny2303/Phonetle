@@ -1,6 +1,5 @@
-h1 {
-    text-align: center;
-}
+h1 {text-align: center;}
+h2 {text-align: center;}
 
 #game-board {
     display: flex;
@@ -53,7 +52,7 @@ h1 {
   margin: 0 1px;
   cursor: pointer;
   text-align: center;
-  font-family: monospace;
+  font-family: serif;
 }
 
 .empty-button {
