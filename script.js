@@ -1,5 +1,5 @@
 var wordLength = 5;
-var numTries = 3;
+var numTries = 7;
 
 var answer = getWordOfLength(wordLength)
 
@@ -70,6 +70,10 @@ function placeToggled() {
     }   
 }
 
+function findKeyboardButton(n) {
+    return document.getElementById('k'+n)
+}
+
 function enter() {
     if (currentBox==wordLength) {
         var phonemes = []
@@ -79,19 +83,21 @@ function enter() {
         if (result==null) {window.alert("That is not a word!"); } else {
             for (let i=0;i<wordLength; i++) {
                 var box = getBox(currentRow,i)
-                if (answer[i+1]==box.id) {box.style.backgroundColor = "green";} else {
+                var col = "gray";
+                if (answer[i+1]==box.id) {col = "green";} else {
                     var yellow = false;
                     for (let j=0;j<wordLength; j++) {
                         if (answer[j+1]==box.id) {yellow=true;}
                     }
-                    if (yellow) {box.style.backgroundColor = "yellow";} else {
-                        box.style.backgroundColor = "gray";
-                    }
+                    if (yellow) {col = "yellow";}
                 }
+                box.style.backgroundColor = col;
+                var key = findKeyboardButton(box.id);
+                console.log(key)
+                key.style.backgroundColor = col;
             }
             currentRow++;
             currentBox=0;
-            window.alert(result);
         }
     } else {
         window.alert("Complete your word first!");
