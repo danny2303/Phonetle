@@ -113,7 +113,7 @@ function undo() {
 }
 
 var sounds = []
-for (let i=1; i<45; i++) {sounds[i] = new Audio("Sounds/"+i.toString()+".wav");}
+for (let i=1; i<47; i++) {sounds[i] = new Audio("Sounds/"+i.toString()+".wav");}
 
 /*
 var currentIndex = 0; // keep track of the current index
