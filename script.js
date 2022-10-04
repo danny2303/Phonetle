@@ -79,7 +79,7 @@ function enter() {
         var phonemes = []
         for (let i=0; i<wordLength; i++) {phonemes[i] = getBox(currentRow,i).id}
         var result = findPronunciation(phonemes)
-        console.log(phonemes,result)
+
         if (result==null) {window.alert("That is not a word!"); } else {
             for (let i=0;i<wordLength; i++) {
                 var box = getBox(currentRow,i)
@@ -93,7 +93,6 @@ function enter() {
                 }
                 box.style.backgroundColor = col;
                 var key = findKeyboardButton(box.id);
-                console.log(key)
                 key.style.backgroundColor = col;
             }
             currentRow++;
