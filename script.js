@@ -97,6 +97,9 @@ function enter() {
             }
             currentRow++;
             currentBox=0;
+            if (currentRow==numTries) {
+                window.alert("The word was: " + answer[0]);
+            }
         }
     } else {
         window.alert("Complete your word first!");
